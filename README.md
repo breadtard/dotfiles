@@ -10,4 +10,3 @@ alacritty | terminal
 feh | background thing
 polybar | bar
 
-![Rice Screenshot](/screenshots/green\ rice\ finished\ pog.png)
