@@ -1,5 +1,6 @@
-# dotfiles
-my dotfiles
+# Green Forest .files
+i am very original
+
 These dots require:
 Name of package | reason
 --------------- | ------
@@ -9,4 +10,7 @@ dmenu | program launcher (rofi machine broke)
 alacritty | terminal
 feh | background thing
 polybar | bar
+
+wallpaper is in i3/wallpaper.png
+also change .zshrc to include your username because idfk how to make it work 
 
