@@ -11,6 +11,11 @@ alacritty | terminal
 feh | background thing
 polybar | bar
 
-wallpaper is in i3/wallpaper.png
-also change .zshrc to include your username because idfk how to make it work 
+# Troubleshooting
+##hyelp wallpaper doesnt work
+###you have to edit i3 config file and put path to wallpaper
+
+##hyelp zshrc doesnt work
+###you have to edit it, because it has a path to /home/someuser/
+
 
