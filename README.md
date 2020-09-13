@@ -20,4 +20,7 @@ polybar | bar
 
  you have to edit it, because it has a path to /home/someuser/
 
+what does GREEN and BLUE mean???m
+
+GREEN is green forest dotfiles, while BLUE is blue ice dotfiles. Shellrc and xbindkeys is outside those because its not changed between dots.
 
