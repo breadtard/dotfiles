@@ -5,8 +5,8 @@ These dots require:
 Name of package | reason
 --------------- | ------
 picom | compositor
-xbindkeys | keybind manager (i dont like doing them in i3 config)
-dmenu | program launcher (rofi machine broke)
+xbindkeys | keybind manager (because i also need some keybinds in other wms such as KWIN)
+rofi | program launcher 
 alacritty | terminal
 feh | background thing
 polybar | bar

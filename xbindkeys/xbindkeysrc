@@ -62,7 +62,7 @@
 "emacs"
     m:0x90 + c:40
     Mod2+Mod5 + d 
-"dmenu_run"
+"rofi -theme sidebar -show run"
     m:0x4 + c:65
     Control + space
 #
