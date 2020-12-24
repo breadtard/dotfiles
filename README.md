@@ -5,22 +5,24 @@ These dots require:
 Name of package | reason
 --------------- | ------
 picom | compositor
-xbindkeys | keybind manager (because i also need some keybinds in other wms such as KWIN)
 rofi | program launcher 
 alacritty | terminal
-feh | background thing
+nitrogen | background thing
 polybar | bar
 
-# Troubleshooting
- hyelp wallpaper doesnt work
+# FaQ
+Q | A
+--|--
+Why did you make FaQ when theres literally no questions | this time FaQ stands for Fully Anticipated Questions
+Why nitrogen? | its better than messing around with feh
+Why fedora? | arch broke
+Why are you using default Polybar lamoooo | shut up 
+Your alacritty background isnt the same one as dracula 0/10 unstarred | NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-
+Alacritty theme doesnt work! | change alacritty.yml (line 165) to the path of alacritty-theme.yml
 
- you have to edit i3 config file and put path to wallpaper
+# CREDDITS
+Wallpaper: PowerMan2206
 
- hyelp zshrc doesnt work
+Dracula theme: https://draculatheme.com
 
- you have to edit it, because it has a path to /home/someuser/
-
-what does GREEN and BLUE mean???m
-
-GREEN is green forest dotfiles, while BLUE is blue ice dotfiles. Shellrc and xbindkeys is outside those because its not changed between dots.
-
+almost everything else: Me
