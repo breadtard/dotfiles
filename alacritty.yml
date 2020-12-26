@@ -164,8 +164,8 @@ colors:
         import:
                 /home/breadboi/Downloads/alacritty-master/dracula.yml
   # Default colors
-  #primary:
-  #background: '#123456'
+        primary:
+                background: '#282a36'
   #foreground: '#ffffff'
 
     # Bright and dim foreground colors
