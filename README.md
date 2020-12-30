@@ -10,6 +10,20 @@ alacritty | terminal
 nitrogen | background thing
 polybar | bar
 
+# Installation
+To install these dots, simple use the Makefile. You can either
+use `make all` to make copy everything, or copy individual config
+files. These are the available ""commands"" i guess:
+```
+make alacritty
+make discord
+make zsh
+make emacs
+make polybar
+make i3
+make all
+```
+
 # FaQ
 Q | A
 --|--
