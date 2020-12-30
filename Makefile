@@ -31,7 +31,7 @@ emacs:
 
 all:
 	cp alacritty-theme.yml ~/.config/alacritty-dracula-theme.yml
-	sed -e "s+/home/breadboi/Downloads/alacritty-master/dracula.yml+~/.config/alacritty-dracula-theme/yml+g"
+	sed -e "s+/home/breadboi/Downloads/alacritty-master/dracula.yml+~/.config/alacritty-dracula-theme.yml+g" alacritty.yml
 	cp alacritty.yml ~/.config/alacritty.yml
 	echo "[i] Alacritty done!"
 	cp i3-config ~/.config/i3/config
