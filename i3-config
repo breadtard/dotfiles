@@ -178,6 +178,7 @@ bindsym Print exec flameshot gui &
 gaps outer 3
 gaps inner 3
 exec_always --no-startup-id setxkbmap pl &
-bindsym $mod+Shift+d exec emacs
-bindsym $mod+Shift+p exec mpv POYO.mp3 &
+bindsym $mod+Shift+d exec emacsclient -c
+bindsym $mod+Shift+p exec ~/.local/bin/poyo && mpv $HOME/Music/kirby-poyo.mp3 &
 exec_always --no-startup-id dunst &
+bindsym XF86Tools exec rhythmbox &
