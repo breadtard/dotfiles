@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "YOUR-NAME-HERE"
-      user-mail-address "cock.ball@torture.cum")
+(setq user-full-name "Breadboi"
+      user-mail-address "fake-email-here")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -53,6 +53,25 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(map!
- "C-x C-1" #'ido-switch-buffer
- "C-x C-2" #'eshell)
+(defun breadsplash ()
+  (mapc (lambda (line)
+          (insert (propertize (+doom-dashboard--center +doom-dashboard--width line)
+                              'face 'doom-dashboard-banner) " ")
+          (insert "\n"))
+        '("8888888888 888b     d888        d8888  .d8888b.   .d8888b. "
+          "888        8888b   d8888       d88888 d88P  Y88b d88P  Y88b"
+          "888        88888b.d88888      d88P888 888    888 Y88b.     "
+          "8888888    888Y88888P888     d88P 888 888         Y888b.   "
+          "888        888 Y888P 888    d88P  888 888            Y88b  "
+          "888        888  Y8P  888   d88P   888 888    888       888 "
+          "888        888   '   888  d8888888888 Y88b  d88P Y88b  d88P"
+          "8888888888 888       888 d88P     888  'Y8888P'   'Y8888P' "
+          "                                                           "
+          "-----------------------------------------------------------"
+          "                                                           "
+          "The best text editor"
+          "that nobody knows how to use"
+          "                                                           "
+          "(except Stallman)")))
+
+(setq +doom-dashboard-ascii-banner-fn #'breadsplash)
