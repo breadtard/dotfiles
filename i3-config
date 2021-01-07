@@ -46,7 +46,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # open rofi
-bindsym $mod+Shift+space exec rofi -show run &
+bindsym $mod+Shift+space exec rofi -show run -theme ~/.config/rofi &
 
 # change focus
 bindsym $mod+j focus left
@@ -167,7 +167,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 # -- My config starts here! --
 # Start picom, a compositor
-exec_always --no-startup-id picom --experimental-backend --blur-kern 7x7gaussian &
+exec_always --no-startup-id picom &
 # Set wallpaper with nitrogen
 exec_always --no-startup-id nitrogen --restore &
 # Titles and borders are ugly, nuke 'em
@@ -175,3 +175,8 @@ for_window [class=".*"] border pixel 0
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/start.sh
 bindsym Print exec flameshot gui &
+gaps outer 3
+gaps inner 3
+exec_always --no-startup-id setxkbmap pl &
+bindsym $mod+Shift+d exec emacs
+bindsym $mod+Shift+p exec mpv POYO.mp3 &
