@@ -180,3 +180,4 @@ gaps inner 3
 exec_always --no-startup-id setxkbmap pl &
 bindsym $mod+Shift+d exec emacs
 bindsym $mod+Shift+p exec mpv POYO.mp3 &
+exec_always --no-startup-id dunst &
