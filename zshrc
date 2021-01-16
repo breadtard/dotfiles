@@ -1,107 +1,6 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.mybins:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="/home/breadboi/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias di="sudo dnf install"
-alias dr="sudo dnf remove"
-alias syu="sudo dnf distro-sync --skip-broken && sudo nix-env --upgrade '.*' && figlet Up to date | lolcat"
-alias vim=nvim
-alias ls='exa -la --color=always'
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$PATH
+setopt autocd beep
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"
 }
@@ -118,11 +17,37 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
+alias ls='exa -la --color=always'
 alias py3=python3
 alias py=python
 alias chmx="chmod +x"
 alias termacs='emacs -nw'
-if [ -e /home/breadboi/.nix-profile/etc/profile.d/nix.sh ]; then . /home/breadboi/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-alias ni="nix-env -iA"
-alias nr="nix-env -e"
-
+alias pcs='sudo pacman -S'
+alias pcsyu='sudo pacman -Syu'
+alias pcsi='pacman -Si'
+alias pcss='pacman -Ss'
+alias pcscc='sudo pacman -Scc'
+alias pcrs='sudo pacman -Rs'
+alias pcq='pacman -Q'
+alias pcqo='pacman -Qo'
+alias pcqi='pacman -Qi'
+alias pcqs='pacman -Qs'
+#paru haram
+alias pr='paru' 
+alias prs='paru -S' 
+alias prsyu='paru -Syu'
+alias prsi='paru -Si'
+alias prss='paru -Ss'
+alias prscc='paru -Scc'
+alias prr='paru -R' # paru go prrrrrr
+alias prrs='paru -Rs'
+alias prq='paru -Q'
+alias prqo='paru -Qo'
+alias prqi='paru -Qi'
+alias prqs='paru -Qs'
+alias ytdl="youtube-dl --format mp4"
+alias ytmp3="youtube-dl -x --audio-format mp3"
+alias 0x0file="curl -F file=@'$1' http://0x0.st"
+alias emacs="emacsclient -c"
+alias nspawn='sudo systemd-nspawn'
+alias paru-haram="cat /dev/urandom | head -n18 | cowsay && espeak 'paru haram!'" 
