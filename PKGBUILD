@@ -9,8 +9,7 @@ license=('breadlicense')
 makedepends=('git' 'sed')
 depends=('i3-gaps' 'alacritty' 'polybar' 'rofi' 'nitrogen' 'picom' 'dunst')
 optdepends=('emacs: the best editor that nobody knows how to use'
-            'discord-canary: the full shithole expirience'
-            'betterdiscordctl: the complete shithole expirence'
+	    'uwuterm: yes'
             'i can just put whatever i want here: so thats pog')
 source=("git+https://github.com/breadtard/dotfiles")
 md5sums=('SKIP')
