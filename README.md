@@ -9,15 +9,14 @@ rofi | program launcher
 alacritty | terminal
 nitrogen | background thing
 polybar | bar
+clearine | logout thingy
 
 # FaQ
 Q | A
 --|--
 Why did you make FaQ when theres literally no questions | this time FaQ stands for Fully Anticipated Questions
 Why nitrogen? | its better than messing around with feh
-Why fedora? | arch broke
 Why are you using default Polybar lamoooo | shut up 
-Your alacritty background isnt the same one as dracula 0/10 unstarred | NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-
 Alacritty theme doesnt work! | change alacritty.yml (line 165) to the path of alacritty-theme.yml
 
 # CREDDITS
