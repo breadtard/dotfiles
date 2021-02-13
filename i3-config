@@ -46,7 +46,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # open rofi
-bindsym $mod+Shift+space exec rofi -show run -theme ~/.config/rofi &
+bindsym $mod+Shift+space exec rofi -show run -run-shell-command 'alacritty -e \\" {cmd} && read -n 1 -s\\"' -theme ~/.config/rofi &
 
 # change focus
 bindsym $mod+j focus left
@@ -137,7 +137,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec clearine
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -170,7 +170,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id picom &
 # Set wallpaper with nitrogen
 exec_always --no-startup-id nitrogen --restore &
-# Titles and borders are ugly, nuke 'em
+# Titles and borders are ugly
 for_window [class=".*"] border pixel 0
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/start.sh
@@ -182,3 +182,6 @@ bindsym $mod+Shift+d exec emacsclient -c
 bindsym $mod+Shift+p exec ~/.local/bin/poyo && mpv $HOME/Music/kirby-poyo.mp3 &
 exec_always --no-startup-id dunst &
 bindsym XF86Tools exec rhythmbox &
+exec --no-startup-id emacs --daemon &
+bindsym $mod+Shift+u exec uwuterm &
+bindsym $mod+Shift+b exec firefox &
