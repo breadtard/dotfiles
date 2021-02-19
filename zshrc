@@ -42,7 +42,7 @@ alias prqs='paru -Qs'
 alias ytdl="youtube-dl --format mp4"
 alias ytmp3="youtube-dl -x --audio-format mp3"
 alias ytopus="youtube-dl -x --audio-format opus"
-alias ytbest="youtube-dl --format bestaudio+bestvideo"
+alias ytbest="youtube-dl --format bestvideo+bestaudio"
 
 # 0x0
 alias 0x0file="curl -F file=@'$1' http://0x0.st"
@@ -96,4 +96,8 @@ ex() {
 op() {
 	echo "Go get 'em tiger!"
 	su
+}
+
+ffmpeg-interpolate() {
+	ffmpeg -hwaccel cuda -i $1 -vf "minterpolate=fps=25:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1" -threads 8 $2
 }
