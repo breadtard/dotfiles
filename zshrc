@@ -12,6 +12,17 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.emacs.d/bin:$HOME/o
 setopt autocd beep
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+#######################
+# this is so that home
+# and end keys work
+bindkey '\e[F'    end-of-line
+bindkey '\e[H'    beginning-of-line
+# otherwise they dont
+#######################
+bindkey '\e[3~'   delete-char
+# and this is for DEL
+#######################
+
 #pacman
 alias pcs='yas pacman -S'
 alias pcsyu='yas pacman -Syu'
@@ -61,6 +72,8 @@ alias py3=python3
 alias py=python
 alias chad="neofetch --w3m 😳/epic\ fox\ pfp\ OwO.png --size 300 | sed -e 's/Arch/FurryOS/g'"
 alias w2x=waifu2x-ncnn-vulkan
+alias forceraid='fraid && xdg-open https://fraid.vercel.app/ &'
+
 # mirrors
 alias mirror="yas reflector -c poland -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 alias mirrord="yas reflector -c poland --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
