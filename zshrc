@@ -60,7 +60,6 @@ alias 0x0file="curl -F file=@'$1' http://0x0.st"
 
 # text editors
 alias emacs="emacsclient -c"
-alias vim="nvim"
 alias termacs='emacsclient -nw'
 
 # misc
@@ -112,5 +111,5 @@ op() {
 }
 
 ffmpeg-interpolate() {
-	ffmpeg -hwaccel cuda -i $1 -vf "minterpolate=fps=25:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1" -threads 8 $2
+	ffmpeg -hwaccel cuda -i $1 -vf "minterpolate=fps=$3:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1" -threads 8 $2
 }
